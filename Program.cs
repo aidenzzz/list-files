@@ -2,11 +2,13 @@
 using CommandLine;
 
 class ListFilesApp {
+    // adds support for cli (https://github.com/commandlineparser/commandline/wiki)
     public class Options {
         [Option("filename", Required = false, HelpText = "Input filename.")]
         public string? Filename { get; set; }
     }
 
+    // returns a concated list of all files and directories in a root folder.
     string[] GetAllFiles(string filename) {
         string[] files = Directory.GetFiles(filename, "*", SearchOption.TopDirectoryOnly);
         string[] directories = Directory.GetDirectories(filename, "*", SearchOption.TopDirectoryOnly);
