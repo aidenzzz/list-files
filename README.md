@@ -11,7 +11,7 @@ dotnet build
 ```
 # Usage
 ```bash
-dotnet run [directory to be searched here.]
+dotnet run --filename [directory to be searched here.]
 ```
 
 OR
