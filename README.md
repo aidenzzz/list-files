@@ -7,15 +7,14 @@ Clone the repository:
 ```bash
 git clone https://github.com/aidenzzz/list-files.git [FILENAME]
 cd [FILENAME]
+dotnet build
 ```
 # Usage
 ```bash
-dotnet build
 dotnet run [directory to be searched here.]
 ```
 
 OR
 ```bash
-dotnet build
 dotnet run 
 ```
