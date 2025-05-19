@@ -24,7 +24,10 @@ class ListFilesApp {
 
     static int Main(string[] args) {
         var app = new ListFilesApp();
+        
+        // parsing cli args.
         Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(o => {
+            // if filename arg is passed via CLI
             if (o.Filename != null) {
                 if(!Directory.Exists(o.Filename)) {
                     Console.WriteLine("Please input a valid, existing directory.");
@@ -36,6 +39,7 @@ class ListFilesApp {
                 }
                 app.WriteFilesToDateNamedFile(allFiles);
             }
+            // else run like console app
             else {
                 Console.WriteLine("Input a valid, existing directory: ");
                 string? filename = Console.ReadLine();
